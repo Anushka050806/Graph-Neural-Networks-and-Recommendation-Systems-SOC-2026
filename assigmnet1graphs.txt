@@ -1,0 +1,35 @@
+Q4-Case A: Oscillatory Region (E > V)
+When the total energy E is increased much further above the potential V, the quantity:
+
+k = sqrt(2(E - V))becomes larger.
+
+This increases the frequency of oscillation of the wavefunction. Physically, a higher-energy particle has a shorter wavelength and therefore oscillates more rapidly in space.
+
+CASE B: Physically, this corresponds to a thick potential barrier. The electron has only a very small probability of penetrating deeply into the barrier.
+
+
+
+
+QUESTION 2
+The values show how strongly pairs of variables move together, ranging from 1.00 (perfect positive link) to -1.00 (perfect negative link).
+Multi-collinearity occurs when independent features are highly correlated with each other
+When features are highly correlated, they supply overlapping information, creating redundancy that degrades model performance(overfitting as mathematical model tries to accomodate all redundant features)
+UMAP maintains a broader layout of how these structural clusters relate to one another in the overall space. so it preserves global strcture better.
+The late  and on-time points are deeply intermingled across all clusters in every single plot.
+The UMAP plot with 100 features shows better, tighter clustering.
+
+
+QUESTION 3
+Accuracy: represents total number of correct predictions divided by total number of cases. Because roughly 86.4% of dataset is on-time, a useless model that blindly guesses "On-Time" for every single submission will still achieve 86.4% accuracy.
+
+Precision: Precision answers: our precision is 0, the model never flagged a late submission correctly .
+
+Recall: Recall answers:  Practical Meaning: A recall of 0.0000 means the system is completely blind to late submissions. If an operations team relied on this, 100% of late submissions would slip through the cracks unnoticed.
+
+F1-Score : The harmonic mean of Precision and Recall. It acts as a balanced metric for minority classes. A score of 0 indicates the model has zero functional predictive power for late submissions.
+
+AUC-ROC: This measures the model's ability to distinguish between the two classes across various decision thresholds. A score of 0.50 represents purely random guessing (like flipping a coin).
+
+Logistic Regression (0.4982) and SVC (0.5169) are performing no better than random guessing.
+
+Random Forest (0.4298) is actually performing worse than random guessing, suggesting it is actively confusing the patterns.
